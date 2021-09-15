@@ -40,8 +40,6 @@ int main()
     puts("The mouse ran up the clock.");
 }
 ```
-
-#include <stdio.h>
 ## 4.4
 ```c
 #include <stdio.h>
@@ -53,5 +51,68 @@ int main()
     puts("The clock struck one,");
     puts("The mouse ran down,");
     puts("Hickory, dickory, dock.");
+}
+```
+## 4.5
+```c
+#include <stdio.h>
+
+int main()
+{
+    puts("The secret password is:");
+/*  puts("Spatula."); */
+    return(0);
+}
+```
+## 4.6
+```c
+#include <stdio.h>
+
+int main()
+{
+    puts("The secret password is:");
+    puts("Spatula."); 
+    return(0);
+}
+```
+## 4.7
+```c
+#include <stdio.h>
+
+int main()
+{
+//  puts("The secret password is:");
+    puts("Spatula.");
+    return(0);
+}
+```
+## 4.8
+```c
+#include <stdio.h>
+
+int main()
+{
+    puts("This program goes BOOM!)
+    return(0);
+}
+```
+## 4.9
+```c
+#include <stdio.h>
+
+int main()
+{
+    puts("This program goes BOOM!")
+    return(0);
+}
+```
+## 4.10
+```c
+#include <stdio.h>
+
+int main()
+{
+    puts("This program goes BOOM!");
+    return(0);
 }
 ```
