@@ -116,3 +116,41 @@ int main()
     return(0);
 }
 ```
+## 4.11
+```c
+#include <stdio.h>
+
+int main()
+{
+    printf("I have been a stranger in a strange land.");
+    return(0);
+}
+```
+## 4.12
+```c
+#include <stdio.h>
+
+int main()
+{
+    printf("Hickory, dickory, dock,");
+    printf("The mouse ran up the clock.");
+    printf("The clock struck one,");
+    printf("The mouse ran down,");
+    printf("Hickory, dickory, dock."); 
+    return(0);
+}
+```
+## 4.13
+```c
+#include <stdio.h>
+
+int main()
+{
+    printf("Hickory, dickory, dock,\n");
+    printf("The mouse ran up the clock.\n");
+    printf("The clock struck one,\n");
+    printf("The mouse ran down,\n");
+    printf("Hickory, dickory, dock.\n"); 
+    return(0);
+}
+```
