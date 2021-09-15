@@ -151,6 +151,37 @@ int main()
     printf("The clock struck one,\n");
     printf("The mouse ran down,\n");
     printf("Hickory, dickory, dock.\n"); 
+    printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    return(0);
+}
+```
+## 4.14
+```c
+#include <stdio.h>
+
+int main()
+{
+    printf("\"Hey,\" said the snail, \"I said no salt!\"");
+    printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+}
+```
+## 4.15
+```c
+#include <stdio.h>
+
+int main()
+{
+    puts("\"Hey,\" said the snail, \"I said no salt!\"");
+    printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+}
+```
+## 4.16
+```c
+#include <stdio.h>
+
+int main()
+{
+    writeln("Another horrible mistake.");
     return(0);
 }
 ```
