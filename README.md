@@ -886,3 +886,90 @@ int main()
     return(0);
 }
 ```
+
+# Chapter 16
+## 16.1
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a,b;
+    float c;
+
+    printf("Input the first value: ");
+    scanf("%d",&a);
+    printf("Input the second value: ");
+    scanf("%d",&b);
+    c = a/b;
+    printf("%d/%d = %.2f\n",a,b,c);
+    return(0);
+}
+```
+## 16.2
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a,b;
+    float c;
+
+    printf("Input the first value: ");
+    scanf("%d",&a);
+    printf("Input the second value: ");
+    scanf("%d",&b);
+    c = (float)a/(float)b;
+    printf("%d/%d = %.2f\n",a,b,c);
+    return(0);
+}
+```
+## 16.3
+```c
+#include <stdio.h>
+
+typedef int stinky;
+
+stinky main()
+{
+    stinky a = 2;
+
+    printf("Everyone knows that ");
+    printf("%d + %d = %d\n",a,a,a+a);
+    return(0);
+}
+```
+## 16.4
+```c
+#include <stdio.h>
+
+int main()
+{
+    typedef struct id
+    {
+        char first[20];
+        char last[20];
+    } personal;
+
+    typedef struct date
+    {
+        int month;
+        int day;
+        int year;
+    } calendar;
+
+    struct human
+    {
+        personal name;
+        calendar birthday;
+    };
+    struct human president = {{"George","Washington"}, {2, 22, 1732}};
+
+    printf("%s %s was born on %d/%d/%d\n",\
+            president.name.first,
+            president.name.last,
+            president.birthday.month,
+            president.birthday.day,
+            president.birthday.year);
+}
+```
