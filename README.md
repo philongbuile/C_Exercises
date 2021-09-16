@@ -235,7 +235,7 @@ int main()
     printf("Range of unsigned long long int: 0 %c %llu\n", 26, ulli);
 }
 ```
-## Bonus 1
+## Bonus 2
 ```
 Print These Number "Nicely":
     int i1 = -92233720368;
@@ -329,6 +329,95 @@ int main()
     printf("Subtraction is %d\n",8-2);
     printf("Multiplication is %d\n",8*2);
     printf("Division is %d\n",8/2);
+    return(0);
+}
+```
+## 5.5
+```c
+#include <stdio.h>
+
+int main()
+{
+    printf("456.98 + 213.4 = %f",456.98 + 213.4);
+}
+```
+## 5.6
+```c
+#include <stdio.h>
+
+int main()
+{
+    printf("8 * 14 * 25 = %d",8 * 14 * 25);
+}
+```
+## 5.7
+```c
+#include <stdio.h>
+
+int main()
+{
+    int result = 0 + 50 * 1 - 60 - 60 * 0 + 10;
+    printf("0 + 50 * 1 - 60 - 60 * 0 + 10 = %d", result);
+}
+```
+## 5.8
+```c
+#include <stdio.h>
+
+int main()
+{
+    printf("The total is %d\n",16+17);
+    return(0);
+}
+```
+## 5.9
+```c
+#include <stdio.h>
+
+int main()
+{
+    printf("The total is %d\n", 16.0 + 17);
+    printf("The total is %f\n", 16.0 + 17);
+    return(0);
+}
+```
+## 5.10
+```c
+#include <stdio.h>
+
+int main()
+{
+    printf("The total is %.1f\n", 16.0 + 17.0);
+    return(0);
+}
+```
+## 5.11
+```c
+#include <stdio.h>
+
+int main()
+{
+	  printf("%d/%d=%d\n",2,5,2/5);
+    return(0);
+}
+```
+## 5.12
+```c
+#include <stdio.h>
+
+int main()
+{
+	  printf("%d/%d=%f\n",2,5,2/5);
+    return(0);
+}
+```
+## 5.13
+```c
+#include <stdio.h>
+
+int main()
+{
+	  printf("%d/%d = %f\n", 2, 5, 2.0/5.0);
     return(0);
 }
 ```
