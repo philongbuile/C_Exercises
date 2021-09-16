@@ -235,6 +235,60 @@ int main()
     printf("Range of unsigned long long int: 0 %c %llu\n", 26, ulli);
 }
 ```
+## Bonus 1
+```
+Print These Number "Nicely":
+    int i1 = -92233720368;
+    int i2 =  92233720368;
+```
+Output:
+```
+-2 039 407 152
+2 039 407 152
+```
+Answer:
+```
+#include <stdio.h>
+
+void print_with_space(int num)
+{
+    int temp = 0;
+    int scale = 1;
+    if (num < 0)
+    {
+        printf("-");
+        num = -num;
+    }
+
+    while (num >= 1000)
+    {
+        temp = temp + scale * (num % 1000);
+        num /= 1000;
+        scale *= 1000;
+    }
+
+    printf("%d", num);
+
+    while (scale != 1)
+    {
+        scale /= 1000;
+        num = temp / scale;
+        temp = temp % scale;
+        printf(" %03lld", num);
+    }
+
+    puts("");
+}
+
+int main()
+{
+    int i1 = -92233720368;
+    int i2 =  92233720368;
+
+    print_with_space(i1);
+    print_with_space(i2);
+}
+```
 ## 5.1
 ```c
 #include <stdio.h>
