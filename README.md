@@ -185,3 +185,48 @@ int main()
     return(0);
 }
 ```
+
+# Chapter 5
+## 5.1
+```c
+#include <stdio.h>
+
+int main()
+{
+    printf("The value %d is an integer.\n",986);
+    printf("The value %f is a float.\n",98.6);
+    return(0);
+}
+```
+## 5.2
+```c
+#include <stdio.h>
+
+int main()
+{
+    printf("%d\n%f\n%d\n%f\n",127,3.1415926535,122013,0.00008);
+}
+```
+## 5.3
+```c
+#include <stdio.h>
+
+int main()
+{
+    printf("%d\n%.2f\n%d\n%.1f\n",127,3.1415926535,122013,0.00008);
+}
+```
+## 5.4
+```c
+#include <stdio.h>
+
+int main()
+{
+    puts("Values 8 and 2:");
+    printf("Addition is %d\n",8+2);
+    printf("Subtraction is %d\n",8-2);
+    printf("Multiplication is %d\n",8*2);
+    printf("Division is %d\n",8/2);
+    return(0);
+}
+```
