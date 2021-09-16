@@ -629,7 +629,37 @@ int main()
             president.birthday.month,
             president.birthday.day,
             president.birthday.year);
-
 }
+```
+## 14.9
+```c
+#include <stdio.h>
+#include <string.h>
 
+int main()
+{
+    struct id
+    {
+        char first[20];
+        char last[20];
+    };
+    struct date
+    {
+        int month;
+        int day;
+        int year;
+    };
+    struct human
+    {
+        struct id name;
+        struct date birthday;
+    }president = {{"George", "Washington"}, {2, 22, 1732}};
+
+    printf("%s %s was born on %d/%d/%d\n",
+            president.name.first,
+            president.name.last,
+            president.birthday.month,
+            president.birthday.day,
+            president.birthday.year);
+}
 ```
