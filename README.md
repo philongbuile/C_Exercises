@@ -397,7 +397,7 @@ int main()
 
 int main()
 {
-	  printf("%d/%d=%d\n",2,5,2/5);
+    printf("%d/%d=%d\n",2,5,2/5);
     return(0);
 }
 ```
@@ -407,7 +407,7 @@ int main()
 
 int main()
 {
-	  printf("%d/%d=%f\n",2,5,2/5);
+    printf("%d/%d=%f\n",2,5,2/5);
     return(0);
 }
 ```
@@ -417,7 +417,7 @@ int main()
 
 int main()
 {
-	  printf("%d/%d = %f\n", 2, 5, 2.0/5.0);
+    printf("%d/%d = %f\n", 2, 5, 2.0/5.0);
     return(0);
 }
 ```
