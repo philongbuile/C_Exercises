@@ -222,7 +222,7 @@ int main()
     int i1 = -2147483648, i2 = 2147483647;
     long int li1 = -2147483648, li2 = 2147483647;
     unsigned long int uli = 4294967295;
-    long long int lli1 = -9223372036854775807, lli2 = 9223372036854775807;
+    long long int lli1 = -9223372036854775808, lli2 = 9223372036854775807;
     unsigned long long int ulli = 18446744073709551615;
 
     printf("Range of short int: %hd %c %hd\n", si1, 26, si2);
@@ -231,7 +231,7 @@ int main()
     printf("Range of int: %d %c %d\n", i1, 26, i2);
     printf("Range of long int: %ld %c %ld\n", li1, 26, li2);
     printf("Range of unsigned long int: 0 %c %lu\n", 26, uli);
-    printf("Range of long long int: %llu %c %llu\n", lli1, 26, lli2);
+    printf("Range of long long int: %lld %c %lld\n", lli1, 26, lli2);
     printf("Range of unsigned long long int: 0 %c %llu\n", 26, ulli);
 }
 ```
