@@ -199,7 +199,7 @@ Print These Number:
     long long int lli1 = -9223372036854775807, lli2 = 9223372036854775807;
     unsigned long long int ulli = 18446744073709551615;
 ```
-Expected Result:
+Output:
 ```
 Range of short int: -32768 → 32767
 Range of unsigned short int: 0 → 65535
@@ -207,7 +207,7 @@ Range of unsigned int: 0 → 4294967295
 Range of int: -2147483648 → 2147483647
 Range of long int: -2147483648 → 2147483647
 Range of unsigned long int: 0 → 4294967295
-Range of long long int: 9223372036854775809 → 9223372036854775807
+Range of long long int: -9223372036854775809 → 9223372036854775807
 Range of unsigned long long int: 0 → 18446744073709551615
 ```
 Answer:
