@@ -467,3 +467,169 @@ int main()
     printf("Player %s has played for %.2f hours\n", xbox.name, xbox.hours);
 }
 ```
+## 14.3
+```c
+#include <stdio.h>
+
+int main()
+{
+    struct president
+    {
+        char name[40];
+        int year;
+    };
+    struct president first = {
+        "George Washington",
+        1789
+    };
+
+    printf("The first president was %s\n",first.name);
+    printf("He was inaugurated in %d\n",first.year);
+}
+
+```
+## 14.4
+```c
+#include <stdio.h>
+
+int main()
+{
+    struct president
+    {
+        char name[40];
+        int year;
+    }first = {
+        "George Washington",
+        1789
+    };
+
+    printf("The first president was %s\n",first.name);
+    printf("He was inaugurated in %d\n",first.year);
+}
+```
+## 14.5
+```c
+#include <stdio.h>
+
+int main()
+{
+    struct president
+    {
+        char name[40];
+        int year;
+    }   first  = {"George Washington", 1789},
+        second = {"John Adams", 1897};
+
+    printf("The first president was %s\n",first.name);
+    printf("He was inaugurated in %d\n",first.year);
+    printf("The second president was %s\n",second.name);
+    printf("He was inaugurated in %d\n",second.year);
+}
+```
+## 14.6
+```c
+#include <stdio.h>
+
+struct scores
+{
+    char name[32];
+    int score;
+} player[4];
+
+int main()
+{
+    int x;
+
+    for(x = 0; x < 4; x++)
+    {
+        printf("Enter player %d: ", x + 1);
+        scanf("%s", player[x].name);
+        printf("Enter their score: ");
+        scanf("%d", &player[x].score);
+    }
+
+    puts("Player Info");
+    printf("#\tName\tScore\n");
+    for(x = 0; x < 4; x++)
+    {
+        printf("%d\t%s\t%5d\n", x+1, player[x].name, player[x].score);
+    }
+    return(0);
+}
+```
+## 14.7
+```c
+#include <stdio.h>
+
+struct scores
+{
+    char name[32];
+    int score;
+} player[4], temp;
+
+int main()
+{
+    int x;
+    int a;
+    int b;
+
+    // input
+    for(x = 0; x < 4; x++)
+    {
+        printf("Enter player %d: ", x + 1);
+        scanf("%s", player[x].name);
+        printf("Enter their score: ");
+        scanf("%d", &player[x].score);
+    }
+
+    // sort
+    for(a = 0; a < 3; a++)
+    {
+        for(b = a + 1; b < 4; b++)
+            {
+                if(player[a].score < player[b].score)
+                {
+                    temp = player[a];
+                    player[a] = player[b];
+                    player[b] = temp;
+                }
+            }
+    }
+
+    // display
+    puts("\nPlayer Info");
+    printf("#\tName\tScore\n");
+    for(x = 0; x < 4; x++)
+    {
+        printf("%d\t%s\t%5d\n", x+1, player[x].name, player[x].score);
+    }
+}
+```
+## 14.8
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    struct date
+    {
+        int month;
+        int day;
+        int year;
+    };
+    struct human
+    {
+        char name[45];
+        struct date birthday;
+    } president = {"George Washington", {2, 22, 1732}};
+
+    printf("%s was born on %d/%d/%d\n",
+            president.name,
+            president.birthday.month,
+            president.birthday.day,
+            president.birthday.year);
+
+}
+
+```
