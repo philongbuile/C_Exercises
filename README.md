@@ -805,3 +805,84 @@ int main()
             president.birthday.year);
 }
 ```
+
+# Chapter 15
+## 15.1
+ ```c
+ #include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+    if(argc>1)
+        printf("Greetings, %s!\n",argv[1]);
+    return(0);
+}
+```
+## 15.2
+```c
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+    printf("You typed %d arguments.\n",argc);
+    return(0);
+}
+```
+## 15.3
+```c
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+    printf("You typed %d arguments.\n",argc);
+    printf("Argument one is %s.\n",argv[0]);
+}
+```
+## 15.4
+```c
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+    int i;
+
+    for(i = 0; i < argc; i++)
+    {
+        printf("Arg[%d] = %s\n", i + 1, argv[i]);
+    }
+}
+```
+## 15.5
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+void sub(void);
+
+int main()
+{
+    puts("This program quits before it's done.");
+    sub();
+    puts("Or was that on purpose?");
+}
+
+void sub(void)
+{
+    puts("Which is the plan.");
+    exit(0);
+}
+```
+## 15.6
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    printf("Press Enter to clear the screen:");
+    getchar();
+    system("cls");
+    puts("That's better");
+    return(0);
+}
+```
