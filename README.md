@@ -432,7 +432,7 @@ struct TIME
     int hours;
     int minutes;
     int seconds;
-}start, end;
+};
 ```
 Example
 ```
