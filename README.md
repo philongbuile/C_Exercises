@@ -247,7 +247,7 @@ Output:
 2 039 407 152
 ```
 Answer:
-```
+```c
 #include <stdio.h>
 
 void print_with_space(int num)
