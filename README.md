@@ -423,6 +423,25 @@ int main()
 ```
 
 # Chapter 14
+## Bonus 3
+Find time difference using:
+```
+struct TIME
+{
+    int days;
+    int hours;
+    int minutes;
+    int seconds;
+}start, end;
+```
+Example
+```
+Input:
+  Start: 9 days, 23 hours, 37 minutes, 58 seconds
+  End: 14 days, 7 hours, 4 minutes, 27 seconds
+Output:
+  Time Difference: 4 days, 43 hours, 26 minutes, 29 seconds
+```
 ## 14.1
 ```c
 #include <stdio.h>
