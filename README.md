@@ -445,7 +445,7 @@ Output:
 Answer:
 ```c
 #include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 
 struct TIME
 {
@@ -453,7 +453,22 @@ struct TIME
     int hours;
     int minutes;
     int seconds;
-}start, end, diff;
+};
+
+struct TIME get_input(struct TIME time, char name[10])
+{
+    printf("%s.days = ", name);
+    scanf("%d", &time.days);
+    printf("%s.hours = ", name);
+    scanf("%d", &time.hours);
+    printf("%s.minutes = ", name);
+    scanf("%d", &time.minutes);
+    printf("%s.seconds = ", name);
+    scanf("%d", &time.seconds);
+    printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+
+    return time;
+}
 
 void print_time(struct TIME time)
 {
@@ -524,27 +539,16 @@ struct TIME calculate_diff(struct TIME start, struct TIME end)
 
 int main()
 {
-    // get input
-    printf("start.days = ");
-    scanf("%d", &start.days);
-    printf("start.hours = ");
-    scanf("%d", &start.hours);
-    printf("start.minutes = ");
-    scanf("%d", &start.minutes);
-    printf("start.seconds = ");
-    scanf("%d", &start.seconds);
+    // declare variables
+    struct TIME start;
+    struct TIME end;
+    struct TIME diff;
 
-    printf("end.days = ");
-    scanf("%d", &end.days);
-    printf("end.hours = ");
-    scanf("%d", &end.hours);
-    printf("end.minutes = ");
-    scanf("%d", &end.minutes);
-    printf("end.seconds = ");
-    scanf("%d", &end.seconds);
+    // get input
+    start = get_input(start, "start");
+    end = get_input(end, "end");
 
     // check the input
-    printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
     start = fix_format(start);
     end = fix_format(end);
 
