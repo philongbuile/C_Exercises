@@ -440,7 +440,126 @@ Input:
   Start: 9 days, 23 hours, 37 minutes, 58 seconds
   End: 14 days, 7 hours, 4 minutes, 27 seconds
 Output:
-  Time Difference: 4 days, 43 hours, 26 minutes, 29 seconds
+  Time Difference: 4 days, 7 hours, 26 minutes, 29 seconds
+```
+Answer:
+```c
+#include <stdio.h>
+#include <string.h>
+
+struct TIME
+{
+    int days;
+    int hours;
+    int minutes;
+    int seconds;
+}start, end, diff;
+
+void print_time(struct TIME time)
+{
+    printf("%d days, %d hours, %d minutes, %d seconds\n", time.days, time.hours, time.minutes, time.seconds);
+}
+
+struct TIME fix_format(struct TIME time)
+{
+    if(time.seconds >= 60)
+    {
+        time.seconds -= 60;
+        time.minutes++;
+    }
+
+    if(time.minutes >= 60)
+    {
+        time.minutes -= 60;
+        time.hours++;
+    }
+
+    if(time.hours >= 24)
+    {
+        time.hours -= 24;
+        time.days++;
+    }
+
+    return time;
+}
+
+struct TIME calculate_diff(struct TIME start, struct TIME end)
+{
+    struct TIME temp;
+
+    if(start.seconds > end.seconds)
+    {
+        end.seconds += 60;
+        end.minutes--;
+    }
+
+    if(start.minutes > end.minutes)
+    {
+        end.minutes += 60;
+        end.hours--;
+    }
+
+    if(start.hours > end.hours)
+    {
+        end.hours += 24;
+        end.days--;
+    }
+
+    if(start.days > end.days)
+    {
+        printf("NANI KORE????");
+        printf("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        exit(0);
+    }
+
+    temp.days = end.days - start.days;
+    temp.hours = end.hours - start.hours;
+    temp.minutes = end.minutes - start.minutes;
+    temp.seconds = end.seconds - start.seconds;
+
+    temp = fix_format(temp);
+
+    return temp;
+}
+
+int main()
+{
+    // get input
+    printf("start.days = ");
+    scanf("%d", &start.days);
+    printf("start.hours = ");
+    scanf("%d", &start.hours);
+    printf("start.minutes = ");
+    scanf("%d", &start.minutes);
+    printf("start.seconds = ");
+    scanf("%d", &start.seconds);
+
+    printf("end.days = ");
+    scanf("%d", &end.days);
+    printf("end.hours = ");
+    scanf("%d", &end.hours);
+    printf("end.minutes = ");
+    scanf("%d", &end.minutes);
+    printf("end.seconds = ");
+    scanf("%d", &end.seconds);
+
+    // check the input
+    printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+    start = fix_format(start);
+    end = fix_format(end);
+
+    // calculate time difference
+    diff = calculate_diff(start, end);
+
+    // display data
+    printf("Start: ");
+    print_time(start);
+    printf("End: ");
+    print_time(end);
+    printf("Time Difference: ");
+    print_time(diff);
+    printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+}
 ```
 ## 14.1
 ```c
