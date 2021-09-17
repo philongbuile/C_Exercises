@@ -1,4 +1,4 @@
-# Chapter 3
+ # Chapter 3
 ## 3.1
 ```c
 #include <stdio.h>
@@ -807,6 +807,70 @@ int main()
 ```
 
 # Chapter 15
+## Bonus 5
+Get a list of number from command line and using the following formula toe calculate:
+
+Softmax function (stable)
+<img src="https://latex.codecogs.com/png.latex?\dpi{120}&space;\bg_black&space;\huge&space;m&space;=&space;max(x)" title="\huge m = max(x)" />
+<img src="https://latex.codecogs.com/png.latex?\dpi{120}&space;\bg_black&space;\huge&space;f(x_{i})&space;=&space;\frac{e^{(x_{i}-m)}}{\sum_{j}&space;e^{(x_{j}-m)}}" title="\huge f(x_{i}) = \frac{e^{(x_{i}-m)}}{\sum_{j} e^{(x_{j}-m)}}" />
+Example:
+```
+  Input:  1               2               3
+  Output: 0.090031        0.244728        0.665241
+```
+Answer:
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int i;
+
+float max(float *X, int size)
+{
+    int result = X[0];
+    for (i = 1; i < size; i++)
+    {
+        if (X[i] > result)
+        {
+            result = X[i];
+        }
+    }
+    return result;
+}
+
+void stable_softmax(float *X, int size)
+{
+    double sum_exp;
+    float exp[size];
+    float maximum = max(X, size);
+
+    for (i = 0; i < size; i++)
+    {
+        exp[i] = pow(M_E, X[i] - maximum);
+        sum_exp += exp[i];
+    }
+    printf("\nResult:\n");
+    for (i = 0; i < size; i++)
+    {
+        printf("%f\t", exp[i] / sum_exp);
+    }
+}
+
+int main(int argc, char *argv[])
+{
+    int size = argc - 1;
+    float arr[size];
+
+    printf("Input:\n");
+    for (i = 0; i < size; i++)
+    {
+        arr[i] = atof(argv[i + 1]);
+        printf("%f\t", arr[i]);
+    }
+    stable_softmax(arr, size);
+}
+```
 ## 15.1
  ```c
  #include <stdio.h>
