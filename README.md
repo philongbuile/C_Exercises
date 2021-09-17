@@ -808,7 +808,7 @@ int main()
 
 # Chapter 15
 ## Bonus 5
-Get a list of number from command line and using the formula "Softmax function (stable)" to calculate:
+Get a list of number from command line and using the formula "Softmax function (stable)" to calculate:  
 <img src="https://latex.codecogs.com/png.latex?\dpi{120}&space;\bg_black&space;\huge&space;m&space;=&space;max(x)" title="\huge m = max(x)" />  
 <img src="https://latex.codecogs.com/png.latex?\dpi{120}&space;\bg_black&space;\huge&space;f(x_{i})&space;=&space;\frac{e^{(x_{i}-m)}}{\sum_{j}&space;e^{(x_{j}-m)}}" title="\huge f(x_{i}) = \frac{e^{(x_{i}-m)}}{\sum_{j} e^{(x_{j}-m)}}" />  
 Example:
