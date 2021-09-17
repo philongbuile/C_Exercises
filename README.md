@@ -810,9 +810,9 @@ int main()
 ## Bonus 5
 Get a list of number from command line and using the following formula toe calculate:
 
-Softmax function (stable)
-<img src="https://latex.codecogs.com/png.latex?\dpi{120}&space;\bg_black&space;\huge&space;m&space;=&space;max(x)" title="\huge m = max(x)" />
-<img src="https://latex.codecogs.com/png.latex?\dpi{120}&space;\bg_black&space;\huge&space;f(x_{i})&space;=&space;\frac{e^{(x_{i}-m)}}{\sum_{j}&space;e^{(x_{j}-m)}}" title="\huge f(x_{i}) = \frac{e^{(x_{i}-m)}}{\sum_{j} e^{(x_{j}-m)}}" />
+Softmax function (stable)  
+<img src="https://latex.codecogs.com/png.latex?\dpi{120}&space;\bg_black&space;\huge&space;m&space;=&space;max(x)" title="\huge m = max(x)" />  
+<img src="https://latex.codecogs.com/png.latex?\dpi{120}&space;\bg_black&space;\huge&space;f(x_{i})&space;=&space;\frac{e^{(x_{i}-m)}}{\sum_{j}&space;e^{(x_{j}-m)}}" title="\huge f(x_{i}) = \frac{e^{(x_{i}-m)}}{\sum_{j} e^{(x_{j}-m)}}" />  
 Example:
 ```
   Input:  1               2               3
