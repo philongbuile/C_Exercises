@@ -811,8 +811,8 @@ int main()
 Get a list of numbers from command line and calculate sum
 Example:
 ```
-  Input:  1 2 3
-  Sum = 6
+  Input: 1 2 3
+  Output: Sum = 6
 ```
 ## Bonus 5
 Get a list of numbers from command line and using the formula "Softmax function (stable)" to calculate:  
