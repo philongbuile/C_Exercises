@@ -1021,7 +1021,7 @@ void proc(void)
     scanf("%d",&a);
 }
 ```
-## 16.6
+## 16.7
 ```c
 #include <stdio.h>
 
@@ -1061,5 +1061,125 @@ void twice(void)
     printf("Twice your age is %d.\n",age);
     feet*=2;
     printf("Twice your height is %.1f\n",feet);
+}
+```
+## 16.8
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+struct bot {
+    int xpos;
+    int ypos;
+};
+
+struct bot initialize(struct bot b);
+
+int main()
+{
+    const int size = 5;
+    struct bot robots[size];
+    int x;
+
+    srand((unsigned)time(NULL));
+
+    for(x=0;x<size;x++)
+    {
+        robots[x] = initialize(robots[x]);
+        printf("Robot %d: Coordinates: %d,%d\n",
+               x+1,robots[x].xpos,robots[x].ypos);
+    }
+    return(0);
+}
+
+struct bot initialize(struct bot b)
+{
+    int x,y;
+
+    x = rand();
+    y = rand();
+    x%=20;
+    y%=20;
+    b.xpos = x;
+    b.ypos = y;
+    return(b);
+}
+```
+## 16.9
+```c
+#include <stdio.h>
+
+int verify(int check);
+
+int main()
+{
+    int s;
+
+    printf("Enter a value (0-100): ");
+    scanf("%d",&s);
+    if(verify(s))
+    {
+        printf("%d is in range.\n",s);
+    }
+    else
+    {
+        printf("%d is out of range!\n",s);
+    }
+    return(0);
+}
+
+int verify(int check)
+{
+    enum { false, true };
+
+    if(check < 0 || check > 100)
+        return false;
+    return true;
+}
+```
+## 16.10
+```c
+#include <stdio.h>
+
+int main()
+{
+    enum { SUN, MON, TUE, WED, THU, FRI, SAT };
+    int day;
+
+    printf("Enter a weekday number, 0 - 6: ");
+    scanf("%d",&day);
+
+    if( day < 0 || day > 6 )
+    {
+        puts("Invalid input");
+    }
+    else
+    {
+        switch(day)
+        {
+            case SUN:
+                puts("Sunday");
+                break;
+            case MON:
+                puts("Monday");
+                break;
+            case TUE:
+                puts("Tuesday");
+                break;
+            case WED:
+                puts("Wednesday");
+                break;
+            case THU:
+                puts("Thursday");
+                break;
+            case FRI:
+                puts("Friday");
+                break;
+            case SAT:
+                puts("Saturday");
+        };
+    }
+    return(0);
 }
 ```
