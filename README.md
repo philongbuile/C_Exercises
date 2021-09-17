@@ -814,6 +814,26 @@ Example:
   Input: 1 2 3
   Output: Sum = 6
 ```
+Answer:
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int i;
+
+int main(int argc, char *argv[])
+{
+    int size = argc - 1;
+    float sum;
+
+    for (i = 0; i < size; i++)
+    {
+        sum += atof(argv[i + 1]);
+    } 
+    
+    printf("Sum = %f", sum);
+}
+```
 ## Bonus 5
 Get a list of numbers from command line and using the formula "Softmax function (stable)" to calculate:  
 <img src="https://latex.codecogs.com/png.latex?\dpi{120}&space;\bg_black&space;\huge&space;m&space;=&space;max(x)" title="\huge m = max(x)" />  
