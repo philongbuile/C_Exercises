@@ -190,14 +190,14 @@ int main()
 ## Bonus 1
 Print These Number:
 ```
-    short int si1 = -32768, si2 = 32767;
-    unsigned short int usi = 65535;
-    unsigned int ui = 4294967295;
-    int i1 = -2147483648, i2 = 2147483647;
-    long int li1 = -2147483648, li2 = 2147483647;
-    unsigned long int uli = 4294967295;
-    long long int lli1 = -9223372036854775807, lli2 = 9223372036854775807;
-    unsigned long long int ulli = 18446744073709551615;
+short int si1 = -32768, si2 = 32767;
+unsigned short int usi = 65535;
+unsigned int ui = 4294967295;
+int i1 = -2147483648, i2 = 2147483647;
+long int li1 = -2147483648, li2 = 2147483647;
+unsigned long int uli = 4294967295;
+long long int lli1 = -9223372036854775807, lli2 = 9223372036854775807;
+unsigned long long int ulli = 18446744073709551615;
 ```
 Output:
 ```
@@ -238,8 +238,8 @@ int main()
 ## Bonus 2
 Print These Number "Nicely":
 ```
-    int i1 = -92233720368;
-    int i2 =  92233720368;
+int i1 = -92233720368;
+int i2 =  92233720368;
 ```
 Output:
 ```
