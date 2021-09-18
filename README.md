@@ -78,7 +78,7 @@ int main()
 ```
 ## 4.2
 Print this without using any variable:  
-D:\[00] Upload\[00] Error\[PCCG-01351] "Shingeki no Kyojin" Original Soundtrack [24bit/48kHz].rar
+D:\\[00] Upload\\[00] Error\\[PCCG-01351] \"Shingeki no Kyojin\" Original Soundtrack [24bit/48kHz].rar
 ```c
 #include <stdio.h>
 
