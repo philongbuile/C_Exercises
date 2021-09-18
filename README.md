@@ -65,7 +65,7 @@ Remember me to one who lives there
 She once was a true love of mine
 ```
 Answer:
-```
+```c
 #include <stdio.h>
 
 int main()
