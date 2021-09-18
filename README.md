@@ -19,7 +19,18 @@ Parsley, sage, rosemary, and thyme
 Remember me to one who lives there
 She once was a true love of mine
 ```
+Answer:
+```
+#include <stdio.h>
 
+int main()
+{
+    puts("Are you going to Scarborough Fair?");
+    puts("Parsley, sage, rosemary, and thyme");
+    puts("Remember me to one who lives there");
+    puts("She once was a true love of mine");
+}
+```
 ## 4.2
 Print this without using any variable:
 D:\[00] Upload\[00] Error\[PCCG-01351] "Shingeki no Kyojin" Original Soundtrack [24bit/48kHz].rar
