@@ -251,6 +251,31 @@ Catalog Number: VPCG-84988
 Title: Kiseijuu Sei no Kakuritsu Original Soundtrack
 Number of Tracks: 19
 ```
+Answer:
+```c
+#include <stdio.h>
+
+struct metadata
+{
+    char catalog[20];
+    char title[100];
+    int num_tracks;
+};
+
+struct info
+{
+    char composer[50];
+    struct metadata data;
+}album = {"Arai Ken", {"VPCG-84988", "Kiseijuu Sei no Kakuritsu Original Soundtrack", 19}};
+
+int main()
+{
+    printf("Composer: %s\n", album.composer);
+    printf("Catalog Number: %s\n", album.data.catalog);
+    printf("Title: %s\n", album.data.title);
+    printf("Number of Track: %d\n", album.data.num_tracks);
+}
+```
 ## 14.2
 Find time difference using:
 ```
