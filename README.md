@@ -235,6 +235,46 @@ int main()
 ```
 # Chapter 14
 ## 14.1
+Using struct to store and compute sum of (1 meter and 50 centimeters; 1 meter and 51 centimeters:  
+Output:
+```
+3 meter(s) and 1 centimeter(s)
+```
+Answer:
+```c
+struct height
+{
+  int meters;
+  int centimeters;
+};
+
+struct height sum(struct height a, struct height b)
+{
+  struct height temp;
+  temp.centimeters = a.centimeters + b.centimeters;
+  temp.meters = a.meters + b.meters;
+
+  if (temp.centimeters >= 100)
+  {
+      temp.centimeters -= 100;
+      temp.meters += 1;
+  }
+
+  return temp;
+}
+
+int main()
+{
+  struct height h1 = {1, 50};
+  struct height h2 = {1, 51};
+
+  struct height a = sum(h1, h2);
+
+  printf("%d meter(s) and %d centimeter(s)\n", a.meters, a.centimeters);
+}
+
+```
+## 14.2
 Using struct to store data. 
 This struct has 2 variables: 
  + Composer
@@ -276,7 +316,7 @@ int main()
     printf("Number of Track: %d\n", album.data.num_tracks);
 }
 ```
-## 14.2
+## 14.3
 Find time difference using:
 ```
 struct TIME
