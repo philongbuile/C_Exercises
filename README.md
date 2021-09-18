@@ -171,7 +171,7 @@ This struct has 2 variables:
  + Composer
  + Metadata  
 
-Metadata is also a struct which has 3 variable:
+Metadata is also a struct which has 3 variables:
  + Title
  + Catalog Number
  + Number of Tracks
