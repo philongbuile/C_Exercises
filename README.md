@@ -579,8 +579,7 @@ int main(int argc, char *argv[])
 
 # Chapter 16
 ## 16.1
-Using struct to store and compute sum of (1 meter and 50 centimeters; 1 meter and 51 centimeters)   
-And using typedef with that struct:  
+Using struct to store and compute sum of (1 meter and 50 centimeters; 1 meter and 51 centimeters) and using typedef for that struct  
 Hint:
 ```
 struct height
@@ -631,279 +630,51 @@ int main()
 }
 ```
 ## 16.2
+Using enumerate to store months in year 2000. Let user input a number (1-12) and then print numbers of days of that month  
+Example:
+```
+Input: 2
+Outputs: 29 days
+```
+Answer:
 ```c
 #include <stdio.h>
 
 int main()
 {
-    int a,b;
-    float c;
+    enum {_, January, February, March, April, May, June, July, August, September, October, November, December};
+    int month;
 
-    printf("Input the first value: ");
-    scanf("%d",&a);
-    printf("Input the second value: ");
-    scanf("%d",&b);
-    c = (float)a/(float)b;
-    printf("%d/%d = %.2f\n",a,b,c);
-    return(0);
-}
-```
-## 16.3
-```c
-#include <stdio.h>
+    printf("Enter a month number, 1 - 12:\n>> ");
+    scanf("%d",&month);
 
-typedef int stinky;
-
-stinky main()
-{
-    stinky a = 2;
-
-    printf("Everyone knows that ");
-    printf("%d + %d = %d\n",a,a,a+a);
-    return(0);
-}
-```
-## 16.4
-```c
-#include <stdio.h>
-
-int main()
-{
-    typedef struct id
-    {
-        char first[20];
-        char last[20];
-    } personal;
-
-    typedef struct date
-    {
-        int month;
-        int day;
-        int year;
-    } calendar;
-
-    struct human
-    {
-        personal name;
-        calendar birthday;
-    };
-    struct human president = {{"George","Washington"}, {2, 22, 1732}};
-
-    printf("%s %s was born on %d/%d/%d\n",\
-            president.name.first,
-            president.name.last,
-            president.birthday.month,
-            president.birthday.day,
-            president.birthday.year);
-}
-```
-## 16.5
-```c
-#include <stdio.h>
-
-void proc(void);
-
-int main()
-{
-    puts("First call");
-    proc();
-    puts("Second call");
-    proc();
-    return(0);
-}
-
-void proc(void)
-{
-    int a;
-
-    printf("The value of variable a is %d\n",a);
-    printf("Enter a new value: ");
-    scanf("%d",&a);
-}
-```
-## 16.6
-```c
-#include <stdio.h>
-
-void proc(void);
-
-int main()
-{
-    puts("First call");
-    proc();
-    puts("Second call");
-    proc();
-    return(0);
-}
-
-void proc(void)
-{
-    static int a;
-
-    printf("The value of variable a is %d\n",a);
-    printf("Enter a new value: ");
-    scanf("%d",&a);
-}
-```
-## 16.7
-```c
-#include <stdio.h>
-
-void half(void);
-void twice(void);
-
-int age;
-float feet;
-
-int main()
-{
-    printf("How old are you: ");
-    scanf("%d",&age);
-    printf("How tall are you (in feet): ");
-    scanf("%f",&feet);
-    printf("You are %d years old and %.1f feet tall.\n",age,feet);
-    half();
-    twice();
-    printf("But you're not really %d years old or %.1f feet tall.\n",age,feet);
-    return(0);
-}
-
-void half(void)
-{
-    float a,h;
-
-    a=(float)age/2.0;
-    printf("Half your age is %.1f.\n",a);
-    h=feet/2.0;
-    printf("Half your height is %.1f.\n",h);
-
-}
-
-void twice(void)
-{
-    age*=2;
-    printf("Twice your age is %d.\n",age);
-    feet*=2;
-    printf("Twice your height is %.1f\n",feet);
-}
-```
-## 16.8
-```c
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
-struct bot {
-    int xpos;
-    int ypos;
-};
-
-struct bot initialize(struct bot b);
-
-int main()
-{
-    const int size = 5;
-    struct bot robots[size];
-    int x;
-
-    srand((unsigned)time(NULL));
-
-    for(x=0;x<size;x++)
-    {
-        robots[x] = initialize(robots[x]);
-        printf("Robot %d: Coordinates: %d,%d\n",
-               x+1,robots[x].xpos,robots[x].ypos);
-    }
-    return(0);
-}
-
-struct bot initialize(struct bot b)
-{
-    int x,y;
-
-    x = rand();
-    y = rand();
-    x%=20;
-    y%=20;
-    b.xpos = x;
-    b.ypos = y;
-    return(b);
-}
-```
-## 16.9
-```c
-#include <stdio.h>
-
-int verify(int check);
-
-int main()
-{
-    int s;
-
-    printf("Enter a value (0-100): ");
-    scanf("%d",&s);
-    if(verify(s))
-    {
-        printf("%d is in range.\n",s);
-    }
-    else
-    {
-        printf("%d is out of range!\n",s);
-    }
-    return(0);
-}
-
-int verify(int check)
-{
-    enum { false, true };
-
-    if(check < 0 || check > 100)
-        return false;
-    return true;
-}
-```
-## 16.10
-```c
-#include <stdio.h>
-
-int main()
-{
-    enum { SUN, MON, TUE, WED, THU, FRI, SAT };
-    int day;
-
-    printf("Enter a weekday number, 0 - 6: ");
-    scanf("%d",&day);
-
-    if( day < 0 || day > 6 )
+    if(month < 1 || month > 12)
     {
         puts("Invalid input");
     }
     else
     {
-        switch(day)
+        switch(month)
         {
-            case SUN:
-                puts("Sunday");
-                break;
-            case MON:
-                puts("Monday");
-                break;
-            case TUE:
-                puts("Tuesday");
-                break;
-            case WED:
-                puts("Wednesday");
-                break;
-            case THU:
-                puts("Thursday");
-                break;
-            case FRI:
-                puts("Friday");
-                break;
-            case SAT:
-                puts("Saturday");
+        case January:
+        case March:
+        case May:
+        case July:
+        case August:
+        case October:
+        case December:
+            puts("31 days");
+            break;
+        case February:
+            puts("29 days");
+            break;
+        case April:
+        case June:
+        case September:
+        case November:
+            puts("30 days");
+            break;
         };
     }
-    return(0);
 }
 ```
