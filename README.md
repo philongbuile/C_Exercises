@@ -233,6 +233,39 @@ int main()
     print_with_space(i2);
 }
 ```
+
+# Chapter 6
+## 6.1
+Create an array with const int type, and then try to change the value inside the array. What is the error?
+Answer:
+```
+error: assignment of read-only location 'array[0]'
+```
+## 6.2
+Gwt raidus from user adn calculate the perimeter and area of a circle  
+Example:
+```
+Input: 6
+Output: 
+	Perimeter = 37.699112 (inches)
+	Area = 113.097336 (square inches)
+``` 
+Answer:
+```c
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int radius;
+
+    printf("radius = ");
+    scanf("%d", &radius);
+
+    printf("Perimeter = %f (inches)\n", 2 * M_PI * radius);
+    printf("Area = %f (square inches)\n", M_PI * radius * radius);\
+}
+```
 # Chapter 14
 ## 14.1
 Using struct to store and compute sum of (1 meter and 50 centimeters; 1 meter and 51 centimeters):  
