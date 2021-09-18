@@ -10,7 +10,7 @@ main ()
 }
 ```
 ## 3.2
-Print a box only using puts
+Print a box only using puts  
 Example
 ```
 ************
@@ -34,6 +34,24 @@ int main()
     puts("*          *");
     puts("*          *");
     puts("************");
+}
+```
+## 3.3
+Calculate the perimeter and area of a rectangle with height = 7 (inches) and width = 5 (inches)  
+Output:
+```
+Perimeter = 24 (inches)
+Area = 35 (square inches)
+```
+```c
+#include <stdio.h>
+
+int main() {
+	int height = 7;
+	int width = 5;
+
+	printf("Perimeter = %d (inches)\n", 2*(height + width));
+	printf("Area = %d (square inches)\n", height * width);
 }
 ```
 
