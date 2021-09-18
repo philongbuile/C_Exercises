@@ -169,7 +169,7 @@ int main()
 Using struct to store data. 
 This struct has 2 variables: 
  + Composer
- + Metadata
+ + Metadata  
 Metadata is also a struct which has 3 variable:
  + Title
  + Catalog Number
