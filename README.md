@@ -235,7 +235,7 @@ int main()
 ```
 # Chapter 14
 ## 14.1
-Using struct to store and compute sum of (1 meter and 50 centimeters; 1 meter and 51 centimeters:  
+Using struct to store and compute sum of (1 meter and 50 centimeters; 1 meter and 51 centimeters):  
 Output:
 ```
 3 meter(s) and 1 centimeter(s)
