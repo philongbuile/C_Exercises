@@ -87,6 +87,30 @@ int main()
     printf("D:\\[00] Upload\\[00] Error\\[PCCG-01351] \"Shingeki no Kyojin\" Original Soundtrack [24bit/48kHz].rar");
 }
 ```
+## 4.3 
+Print this table only using printf:
+```
+┌──┬────┐
+├──┼────┤
+│  │    │
+└──┴────┘
+```
+Hint:
+```
+printf("%c", 196);
+```
+Answer:
+```c
+#include <stdio.h>
+
+int main()
+{
+    printf("%c%c%c%c%c%c%c%c%c\n", 218, 196, 196, 194, 196, 196, 196, 196, 191);
+    printf("%c%c%c%c%c%c%c%c%c\n", 195, 196, 196, 197, 196, 196, 196, 196, 180);
+    printf("%c  %c    %c\n", 179, 179, 179);
+    printf("%c%c%c%c%c%c%c%c%c\n", 192, 196, 196, 193, 196, 196, 196, 196, 217);
+}
+```
 
 # Chapter 5
 ## 5.1
