@@ -579,21 +579,55 @@ int main(int argc, char *argv[])
 
 # Chapter 16
 ## 16.1
+Using struct to store and compute sum of (1 meter and 50 centimeters; 1 meter and 51 centimeters)   
+And using typedef with that struct:  
+Hint:
+```
+struct height
+{
+  int meters;
+  int centimeters;
+};
+
+typedef struct height new_datatype;
+```
+Output:
+```
+3 meter(s) and 1 centimeter(s)
+```
+Answer:
 ```c
-#include <stdio.h>
+struct height
+{
+  int meters;
+  int centimeters;
+};
+
+typedef struct height new_datatype;
+
+new_datatype sum(new_datatype a, new_datatype b)
+{
+  new_datatype temp;
+  temp.centimeters = a.centimeters + b.centimeters;
+  temp.meters = a.meters + b.meters;
+
+  if (temp.centimeters >= 100)
+  {
+      temp.centimeters -= 100;
+      temp.meters += 1;
+  }
+
+  return temp;
+}
 
 int main()
 {
-    int a,b;
-    float c;
+  new_datatype h1 = {1, 50};
+  new_datatype h2 = {1, 51};
 
-    printf("Input the first value: ");
-    scanf("%d",&a);
-    printf("Input the second value: ");
-    scanf("%d",&b);
-    c = a/b;
-    printf("%d/%d = %.2f\n",a,b,c);
-    return(0);
+  new_datatype a = sum(h1, h2);
+
+  printf("%d meter(s) and %d centimeter(s)\n", a.meters, a.centimeters);
 }
 ```
 ## 16.2
