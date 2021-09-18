@@ -9,6 +9,33 @@ main ()
   printf("123 * 321 + 123 = %d\n",123 * 321 + 123);
 }
 ```
+## 3.2
+Print a box only using puts
+Example
+```
+************
+*          *
+*          *
+*          *
+*          *
+*          *
+************
+```
+Answer:
+```
+#include <stdio.h>
+
+int main()
+{
+    puts("************");
+    puts("*          *");
+    puts("*          *");
+    puts("*          *");
+    puts("*          *");
+    puts("*          *");
+    puts("************");
+}
+```
 
 # Chapter 4
 ## 4.1
