@@ -22,7 +22,7 @@ Example
 ************
 ```
 Answer:
-```
+```c
 #include <stdio.h>
 
 int main()
